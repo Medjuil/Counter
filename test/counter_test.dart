@@ -43,6 +43,7 @@ void main() {
         () {
       // arrange
       // act
+      counter.incrementCount();
       counter.resetCount();
       // assert
       expect(counter.count, 0);
