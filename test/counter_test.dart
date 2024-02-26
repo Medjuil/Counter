@@ -29,13 +29,14 @@ void main() {
     });
 
     test(
-        'Given the Counter class is instantiated, when calling the incrementCount function, then count = -1',
+        'Given the Counter class is instantiated, when calling the incrementCount function, count = -1, if count < 0 fail',
         () {
       // arrange
       // act
       counter.decrementCount();
       // assert
-      expect(counter.count, -1);
+
+      expect(counter.count, 0);
     });
 
     test(
@@ -47,6 +48,16 @@ void main() {
       counter.resetCount();
       // assert
       expect(counter.count, 0);
+    });
+    test('Given counter class is instantiated', () {
+      counter.incrementCount();
+      expect(counter.count, 1);
+      counter.incrementCount();
+      expect(counter.count, 3);
+      counter.incrementCount();
+      expect(counter.count, 6);
+      counter.incrementCount();
+      expect(counter.count, 10);
     });
   });
 }
