@@ -37,5 +37,15 @@ void main() {
       // assert
       expect(counter.count, -1);
     });
+
+    test(
+        'Given the Counter class is instantiated, when calling the resetCount function, then count = 0',
+        () {
+      // arrange
+      // act
+      counter.resetCount();
+      // assert
+      expect(counter.count, 0);
+    });
   });
 }
