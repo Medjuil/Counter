@@ -4,8 +4,8 @@ Spyier is a simple Flutter application.
 
 ## About
 
-This project contains a `incrementCount` method used to increment a value from a variable `count`
-It also contains test cases which can check out below. Using the (Given, When, Then) and (Arrange, Act, Assesrt) framework and the test result, we can say that the result of the test is correct and reliable.
+This project contains a `incrementCount` method used to increment a value from a variable `count`.
+It also contains test case scenario which you can check out below. Using the (Given, When, Then) and (Arrange, Act, Assert) framework, we can say that the result of the test is correct and reliable.
 
 ## Test Overview
 There are two things that needs to be tested in this project.
