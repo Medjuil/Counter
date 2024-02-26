@@ -1,10 +1,10 @@
 # spyier
 
-A new Flutter project.
+Spyier is a simple Flutter application.
 
-## Getting Started
+## About
 
-This project is a starting point for a Flutter application.
+This project contains a `Counter` method used to increment a value from a variable `count`
 
 A few resources to get you started if this is your first Flutter project:
 
