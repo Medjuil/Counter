@@ -39,7 +39,7 @@ void main() {
     });
 
     test(
-        'Given the Counter class is instantiated, when calling the resetCount function, then count = 0',
+        'Given the Counter class is instantiated, when calling the incrementCount and resetCount function, then count = 0',
         () {
       // arrange
       // act
