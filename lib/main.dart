@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Counter'),
     );
   }
 }
@@ -48,6 +48,18 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decrementCounter() {
+    setState(() {
+      counter.decrementCount();
+    });
+  }
+
+  void _resetCounter() {
+    setState(() {
+      counter.resetCount();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     //
@@ -58,8 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          //
-          //
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
@@ -69,13 +79,17 @@ class _MyHomePageState extends State<MyHomePage> {
               '${counter.count}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            IconButton(
+                onPressed: () => _incrementCounter(),
+                icon: const Icon(Icons.add)),
+            IconButton(
+                onPressed: () => _decrementCounter(),
+                icon: const Icon(Icons.remove)),
+            IconButton(
+                onPressed: () => _resetCounter(),
+                icon: const Icon(Icons.restart_alt))
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
