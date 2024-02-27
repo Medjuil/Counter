@@ -12,7 +12,7 @@ class Counter {
   }
 
   void decrementCount() {
-    _count--;
+    if (_count > 0) _count--;
   }
 
   void resetCount() {
