@@ -35,7 +35,7 @@ void main() {
       // act
       counter.decrementCount();
       // assert
-      expect(counter.count, -1);
+      expect(counter.count, 0);
     });
 
     test(

@@ -6,7 +6,6 @@ void main() {
   testWidgets('Counter increments when pressing the add icon button',
       (tester) async {
     await tester.pumpWidget(const MyApp());
-
     // incrementing
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);

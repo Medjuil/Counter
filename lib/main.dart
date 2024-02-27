@@ -68,7 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 100),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -79,15 +80,21 @@ class _MyHomePageState extends State<MyHomePage> {
               '${counter.count}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            IconButton(
+            ElevatedButton(
                 onPressed: () => _incrementCounter(),
-                icon: const Icon(Icons.add)),
-            IconButton(
+                child: const Row(
+                  children: [Icon(Icons.add), Text('Increment')],
+                )),
+            ElevatedButton(
                 onPressed: () => _decrementCounter(),
-                icon: const Icon(Icons.remove)),
-            IconButton(
+                child: const Row(
+                  children: [Icon(Icons.remove), Text('decrement')],
+                )),
+            ElevatedButton(
                 onPressed: () => _resetCounter(),
-                icon: const Icon(Icons.restart_alt))
+                child: const Row(
+                  children: [Icon(Icons.restart_alt), Text('reset')],
+                )),
           ],
         ),
       ),
